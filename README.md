@@ -2,6 +2,26 @@
 
 Recipe Blog is a website where users can share their recipes. It was built in Django using Python. Users can create their own account and upload their own recipes. 
 
+## Contents
+* [User Experience (UX)](#UX)
+    * [User Stories](#User-Stories)
+* [Scope](#Scope)
+* [Structure](#Structure)
+* [Skeleton](#Skeleton)
+* [Surface](#Surface)
+    * [Colour](#Colour)
+    * [Fonts](#Fonts)
+* [Features](#Features)
+    * [Exsisting Features](#Exsisting-Features)
+    * [Future Features](#Future-Features)
+* [Technologies Used](#Technologies-Used)
+* [Testing](#Testing)
+* [Deployment](#Deployment)
+    * [Heroku](#Heroku)
+    * [Clone](#Clone)
+* [Credits](#Credits)
+    * [Media](#Media)
+    * [Code](#Code)
 
 ## UX
 Recipe Blog is a simple and user intuitive website for users to share their recipes with others and discover recipes by other users. 
