@@ -7,7 +7,8 @@
 <ul>
 {% for recipe in object_list %}
 <li> <a href="{% url 'recipe_detail' recipe.pk %}">{{ recipe.title }}</a> - {{ recipe.author }}
-{{ recipe.description }} <a href="{% url 'update_recipe' recipe.pk %}">Update recipe</a>
+{{ recipe.description }} <small><a href="{% url 'update_recipe' recipe.pk %}">Update recipe</a></small>
+<small><a href="{% url 'delete_recipe' recipe.pk %}">delete recipe</a></small>
 {% endfor %}
 </li>
 </ul>
