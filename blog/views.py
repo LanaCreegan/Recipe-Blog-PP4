@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from django.views.generic import ListView, DetailView, CreateView, UpdateView
+from django.views.generic import ListView, DetailView, CreateView, UpdateView, DeleteView
 from .models import Recipe
 from .forms import RecipeForm
 
@@ -21,4 +21,7 @@ class UpdateRecipeView(UpdateView):
     template_name = 'edit_recipe.html'
     fields = ['title', 'description']
 
+class DeleteRecipeView(DeleteView):
+    model = Recipe
+    template_name = 'delete_recipe.html'
     
