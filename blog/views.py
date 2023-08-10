@@ -13,5 +13,6 @@ class RecipeDetailView(DetailView):
 
 class AddRecipeView(CreateView):
     model = Recipe
+    form_class = RecipeForm
     template_name = 'add_recipe.html'
-    fields = '__all__'
+    
