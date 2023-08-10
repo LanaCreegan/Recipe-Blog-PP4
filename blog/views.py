@@ -17,7 +17,8 @@ class AddRecipeView(CreateView):
     model = Recipe
     form_class = RecipeForm
     template_name = 'add_recipe.html'
-
+    success_message = 'Your thing has been done successfully'
+    
 class UpdateRecipeView(UpdateView):
     model = Recipe
     template_name = 'edit_recipe.html'

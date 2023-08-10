@@ -1,6 +1,5 @@
 {% extends 'base.html' %}
 
-
 {% block content %}
 <h1>{{ recipe.title }}</h1>
 {{ recipe.posted_date }}
@@ -14,5 +13,6 @@
 <div>
 <a href="{% url 'recipe_view' %}" class="btn btn-secondary">Back</a>
 </div>
+
 
 {% endblock %}
