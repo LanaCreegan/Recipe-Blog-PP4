@@ -21,3 +21,16 @@ Recipe Views:
 * Recipe Instructions - As a Site User I can view the instructions on each recipe so that I can easily follow them
 * Multiple Recipe Summary -  As a Site User I would like to be able to view multiple recipces at once so I have a choice as to what recipe I want to try
 
+## Scope
+User Account:
+* Users can create an account
+* Users can sign in and out of their account
+
+Recipes: 
+* Users can create, view, edit and delete their recipes 
+
+Recipe Interaction: 
+* Users can leave a comment on a recipe and save a recipe. The user needs to be logged in to interact with recipes.
+
+Responsiveness:
+* Create a website that is fully responsive for desktop, tablet and mobile.
