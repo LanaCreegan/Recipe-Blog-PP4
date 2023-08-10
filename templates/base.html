@@ -1,9 +1,11 @@
 <h1>post</h1>
 
 <ul>
+    <li>
 {% for recipe in object_list %}
 {{ recipe.title }} 
 {{ recipe.author }}
 {{ recipe.description }}
 {% endfor %}
+</li>
 </ul>
