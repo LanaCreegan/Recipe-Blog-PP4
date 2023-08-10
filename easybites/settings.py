@@ -31,7 +31,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['recipe-blog-56bae4a81d23.herokuapp.com', 'localhost']
+ALLOWED_HOSTS = ['recipe-blog-56bae4a81d23.herokuapp.com', '8000-lanacreegan-recipeblogp-b2x6vnj66vg.ws-eu102.gitpod.io', 'localhost']
 
 
 # Application definition
@@ -44,7 +44,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'cloudinary_storage',
     'django.contrib.staticfiles',
-    'cloudinary'
+    'cloudinary',
     'blog',
 ]
 
