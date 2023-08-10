@@ -1,0 +1,11 @@
+<h1>{{ recipe.title }}</h1>
+<small>By: {{ recipe.author }}</small><br/>
+<hr>
+<br/>
+{{ recipe.description }}
+
+
+<br/><br/>
+<div>
+<a href="{% url 'recipe_view' %}">Back</a>
+</div>
