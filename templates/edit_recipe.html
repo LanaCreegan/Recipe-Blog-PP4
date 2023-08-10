@@ -2,6 +2,7 @@
 
 {% block content %}
 
+{% if user.is_authenticated %}
 <h1>Edit Recipe:</h1>
 <form method="POST">
     {% csrf_token %}
@@ -11,6 +12,6 @@
     <button class="btn btn-secondary">Post Update</button>
 
 </form>
-
+{% endif %}
 
 {% endblock %}

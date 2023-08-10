@@ -9,8 +9,11 @@
 <li> <a href="{% url 'recipe_detail' recipe.pk %}">{{ recipe.title }}</a> - {{ recipe.author }}
 {{ recipe.description }}
 {{ recipe.posted_date }}
+
+{% if user.is_authenticated %}
  <small><a href="{% url 'update_recipe' recipe.pk %}">Update recipe</a></small>
 <small><a href="{% url 'delete_recipe' recipe.pk %}">delete recipe</a></small>
+{% endif %}
 {% endfor %}
 </li>
 </ul>
