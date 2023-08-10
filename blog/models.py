@@ -2,6 +2,7 @@ from django.db import models
 from django.contrib.auth.models import User
 from cloudinary.models import CloudinaryField
 from django.urls import reverse
+from datetime import datetime, date
 
 
 class Recipe(models.Model):
@@ -9,6 +10,7 @@ class Recipe(models.Model):
     author = models.ForeignKey(User, on_delete=models.CASCADE)
     description = models.TextField(max_length=500, null=True)
     featured_image = CloudinaryField('image', default='placeholder')
+    posted_date = models.DateField(auto_now_add=True)
 
 
     def __str__(self):
