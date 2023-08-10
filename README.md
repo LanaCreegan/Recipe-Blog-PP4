@@ -77,6 +77,33 @@ Fonts
 
 ## Features 
 Exisiting Features
+### Home Page
+- The hero image welcomes users to the site with a message 
+
+### Home Page - Recipes
+- Underneath the hero image the recipes are displayed
+
+### Recipe Detail Page
+- On the recipe page users can see all recipes available on the website. To fully see the recipe users can click on the recipe title
+
+### Recipe Page
+- In the recipe page, users can see the recipe's main image, along with the title, author, and description of the recipe.
+
+### Add Recipe Page
+- On this page users can fill out the form to add a recipe
+
+### Edit Recipe Page
+- On this page users can fill out the form to edit a recipe
+
+### Signup Page
+- On the signup page, a new user can signup for the blof by filling out and submitting the form
+
+### Login Page
+- On the login page, users can login to the site by entering their username and password if they are a registered user
+
+### Logout Page
+- On the logout page, users can confirm that they want to log out of the site
+
 
 Future Features
 
