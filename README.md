@@ -54,3 +54,12 @@ Database
 Colour 
 
 Fonts 
+
+## Features 
+Exisiting Features
+
+Future Features
+
+## Technologies Used
+Python - 
+Heroku - used for deploying the site
