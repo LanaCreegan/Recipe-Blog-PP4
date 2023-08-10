@@ -34,3 +34,13 @@ Recipe Interaction:
 
 Responsiveness:
 * Create a website that is fully responsive for desktop, tablet and mobile.
+
+## Structre 
+Home page:
+* Features a register/sign in section so the user can create an account and sign in to access different features. 
+
+Recipe Page:
+* Features a list of recipes posted by the user and other users. Visible if you are registered or not.
+
+Recipe Steps Page:
+* Users can click into a recipe for instructions for the recipes. Save and comment features are for signed in users only.
