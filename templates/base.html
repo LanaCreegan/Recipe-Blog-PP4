@@ -1,0 +1,9 @@
+<h1>post</h1>
+
+<ul>
+{% for recipe in object_list %}
+{{ recipe.title }} 
+{{ recipe.author }}
+{{ recipe.description }}
+{% endfor %}
+</ul>
