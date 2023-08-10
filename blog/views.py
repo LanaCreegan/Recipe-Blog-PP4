@@ -2,6 +2,7 @@ from django.shortcuts import render
 from django.views.generic import ListView, DetailView, CreateView, UpdateView, DeleteView
 from .models import Recipe
 from .forms import RecipeForm
+from django.urls import reverse_lazy
 
 class RecipeView(ListView):
     model = Recipe
@@ -24,4 +25,5 @@ class UpdateRecipeView(UpdateView):
 class DeleteRecipeView(DeleteView):
     model = Recipe
     template_name = 'delete_recipe.html'
+    success_url = reverse_lazy('recipe_view')
     
