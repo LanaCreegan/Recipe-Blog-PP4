@@ -4,10 +4,11 @@
 {% block content %}
 
 <h1>My Recipes</h1>
+
 {% for recipe in recipe_list %}
 <div class="col-sm-6 mb-3 mb-sm-0">
     <div class="card">
-      <img src="https://www.indiafoodnetwork.in/h-upload/2021/12/14/613900-google-year-in-search-2021-for-indian-recipes-featured.webp" class="card-img-top" alt="...">
+      <img src="{{ recipe.featured_image.url }}" class="card-img-top" alt="...">
       <div class="card-body">
         <h2><a class="recipe-name" href="{% url 'recipe_detail' recipe.pk %}">{{ recipe.title }}</a></h2>
         <p class="card-title">{{ recipe.author }} - {{ recipe.posted_date }}</p>
@@ -16,7 +17,27 @@
     </div>
     {% if user.is_authenticated %}
     <small><a class="btn btn-primary mt-2" href="{% url 'update_recipe' recipe.pk %}">Update Recipe</a></small>
-    <small><a class="btn btn-danger mt-2" href="{% url 'delete_recipe' recipe.pk %}">Delete Recipe</a></small>
+    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#recipe-delete-modal">
+      Delete Recipe
+    </button>
+
+    <div class="modal fade" id="recipe-delete-modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Delete Recipe</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <p>Are you sure you want to delete the recipe?</p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            <a class="btn btn-primary mt-2" href="{% url 'delete_recipe' recipe.pk %}">Delete Recipe</a>
+          </div>
+        </div>
+      </div>
+    </div>
     {% endif %}
 </div>
   

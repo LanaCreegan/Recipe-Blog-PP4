@@ -8,7 +8,7 @@
             <h1 class="recipe-page-title">{{ recipe.title }}</h1>
             <p class="recipe-page-date">{{ recipe.posted_date }}</p>
             <small class="recipe-page-author">By: {{ recipe.author }}</small>
-            <img src="https://www.indiafoodnetwork.in/h-upload/2021/12/14/613900-google-year-in-search-2021-for-indian-recipes-featured.webp" class="card-img-top" alt="...">
+            <img src="{{ recipe.featured_image.url }}" class="card-img-top" alt="...">
         </div>
     </div>
     <div class="row">
