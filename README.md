@@ -78,53 +78,94 @@ Fonts
 ## Features 
 Exisiting Features
 ### Home Page
-<img src="media/banner-image.png">
-- The banner image welcomes users to the site with a message 
+<img src="media/banner-image.png" width="30%">
+
+* The banner image welcomes users to the site with a message 
+
+### Recipe Page
+<img src="media/Recipes.png" width="30%">
+
+* The recipe page displays all recipes on the site
+* Displays buttons to update recipe, delete recipe and add recipe when logged in
 
 ### Recipe Detail Page
-<img src="media/recipe-details-page.png">
-- On the recipe page users can see all recipes available on the website, along with the title, author, and description of the recipe.. To fully see the recipe users can click on the recipe title
+<img src="media/recipe-details-page.png" width="30%">
+
+* On the recipe page users can see all recipes available on the website, along with the title, author, and description of the recipe. To fully see the recipe users can click on the recipe title
+
+### Like and Back button
+<img src="media/likes-back-button.png">
+
+* Users can like a recpie and view how many likes are on the recipe. A back button is available for users to return to the recipes page
 
 ### Add Recipe Page
-<img src="media/add-recipe.png">
-- On this page users can fill out the form to add a recipe
-- When a user adds a recipe a message pops up at the top of the page letting them know they have successfully added the recipe
+<img src="media/add-recipe.png" width="30%">
+
+* On this page users can fill out the form to add a recipe
+
+<img src="media/recipe-add-message.png" width="30%">
+
+* When a user adds a recipe a message pops up at the top of the page letting them know they have successfully added the recipe
 
 ### Edit Recipe Page
-<img src="media/edit-recipe.png">
-- On this page users can fill out the form to edit a recipe
-- When a user edits a recipe a message pops up at the top of the page letting them know they have successfully edited the recipe
+<img src="media/edit-recipe.png" width="30%">
+
+* On this page users can fill out the form to edit a recipe
+
+<img src="media/edit-message.png" width="30%">
+
+* When a user edits a recipe a message pops up at the top of the page letting them know they have successfully edited the recipe
 
 ### Delete Recipe Page
-<img src="media/delete-recipe-modal.png">
-- The modal will ask the user if they want to delete the recipe
-<img src="media/delete-recipe.png">
-- Once confirmed a message pops up at the top of the page letting them know they have successfully deleted the recipe
+<img src="media/delete-recipe-modal.png" width="30%">
+
+* The modal will ask the user if they want to delete the recipe
+
+<img src="media/delete-recipe.png" width="30%">
+
+* Once confirmed a message pops up at the top of the page letting them know they have successfully deleted the recipe
 
 ### Signup Page
-<img src="media/signup-page.png">
-- On the signup page, a new user can signup for the blof by filling out and submitting the form
-<img src="media/signed-up-message.png">
-- When a user signs up to the site a message pops up at the top of the page letting them know they have successfully signed in
+<img src="media/signup-page.png" width="30%">
+
+* On the signup page, a new user can signup for the blof by filling out and submitting the form
+
+<img src="media/signed-up-message.png" width="30%">
+
+* When a user signs up to the site a message pops up at the top of the page letting them know they have successfully signed in
 
 ### Login Page
-<img src="media/signin-page.png">
-- On the login page, users can login to the site by entering their username and password if they are a registered user
-<img src="media/signin-message.png">
-- - When a user logs in to the site a message pops up at the top of the page letting them know they have successfully signed in
+<img src="media/signin-page.png" width="30%">
+
+* On the login page, users can login to the site by entering their username and password if they are a registered user
+
+<img src="media/signin-message.png" width="30%">
+
+* When a user logs in to the site a message pops up at the top of the page letting them know they have successfully signed in
 
 ### Logout Page
-<img src="media/signout.png">
-- On the logout page, users can confirm that they want to log out of the site
-<img src="media/signout-message.png">
-- When a user logs out of the site a message pops up at the top of the page letting them know they have successfully signed out
+<img src="media/signout.png" width="30%">
+
+* On the logout page, users can confirm that they want to log out of the site
+
+<img src="media/signout-message.png" width="30%">
+
+* When a user logs out of the site a message pops up at the top of the page letting them know they have successfully signed out
 
 ### Navbar
-<img src="media/narbar-logged-out.png">
-- The navbar is present on the top of every page
-- It displays home, register and login if the user is not logged in
-<img src="media/navbar-signedin.png">
-- Once logged in it displays home and logout
+<img src="media/narbar-logged-out.png" width="30%">
+
+* The navbar is present on the top of every page
+* It displays home, register and login if the user is not logged in
+
+<img src="media/navbar-signedin.png" width="30%">
+
+* Once logged in it displays home and logout
+
+### Footer
+<img src="media/footer.png" width="30%">
+
+* The footer displays social media links for the site
 
 Future Features
 - Add ability to comment on recipes
@@ -154,5 +195,15 @@ The repository can be cloned by following these steps:
 
 ## Credits
 Media 
+Recipes from
+* [here](https://www.bbcgoodfood.com/recipes/pizza-margherita-4-easy-steps)
+* [here](https://www.bbcgoodfood.com/recipes/gyoza)
+* [here](https://www.bbcgoodfood.com/recipes/chocolate-muffins)
+* [here](https://www.bbcgoodfood.com/recipes/air-fryer-chicken-thighs)
+* [here](https://www.bbcgoodfood.com/recipes/one-pot-tomato-orzo)
+
+Banner image was taken from [Unsplash](https://unsplash.com/)
 
 Content 
+* Pagination was taken and adapted from [here](https://docs.djangoproject.com/en/4.2/topics/pagination/)
+* Form was inspired from [here](https://docs.djangoproject.com/en/4.2/topics/forms/) and [here](https://www.geeksforgeeks.org/django-forms/)
