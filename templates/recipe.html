@@ -11,7 +11,7 @@
       <div class="card-body">
         <h2><a class="recipe-name" href="{% url 'recipe_detail' recipe.pk %}">{{ recipe.title }}</a></h2>
         <p class="card-title">{{ recipe.author }} - {{ recipe.posted_date }}</p>
-        <p class="card-text">{{ recipe.description|slice:":200"|safe }}</p>
+        <p class="card-text">{{ recipe.description|safe }}</p>
       </div>
     </div>
     {% if user.is_authenticated %}
@@ -49,10 +49,10 @@
     <ul class="pagination justify-content-center">
         {% if page_obj.has_previous %}
         <li><a href="?page={{ page_obj.previous_page_number }}" aria-label="Go to the blog next page"
-                class="page-link">&laquo; PREV </a></li>
+                class="page-link" class="prev">&laquo; PREV </a></li>
         {% endif %}
         {% if page_obj.has_next %}
-        <li><a href="?page={{ page_obj.next_page_number }}" aria-label="Go to the blog back page" class="page-link">
+        <li><a href="?page={{ page_obj.next_page_number }}" aria-label="Go to the blog back page" class="page-link" class="next">
                 NEXT &raquo;</a></li>
         {% endif %}
     </ul>

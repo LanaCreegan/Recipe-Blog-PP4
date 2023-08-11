@@ -13,7 +13,7 @@
     </div>
     <div class="row">
         <hr>
-        <p class="recipe-page-description">{{ recipe.description }}</p>
+        <p class="recipe-page-overview">{{ recipe.overview|safe }}</p>
 
         <hr>
         <form action="{% url 'like_recipe' recipe.pk %}" method="POST">

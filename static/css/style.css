@@ -43,6 +43,12 @@ body {
     margin-right: 8px;
 }
 
+/*---BUTTON---*/
+.pagination a {
+    color: #fff;
+    background-color: black;
+    border-radius: 5px;
+}
 
 /*------FOOTER------*/
 footer {

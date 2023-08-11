@@ -52,7 +52,7 @@ class AddRecipeView(SuccessMessageMixin, CreateView):
 class UpdateRecipeView(SuccessMessageMixin, UpdateView):
     model = Recipe
     template_name = 'edit_recipe.html'
-    fields = ['title', 'description']
+    fields = ['title', 'description', 'overview']
     success_message = 'The post was successfully updated'
 
 
@@ -64,6 +64,3 @@ def delete_recipe(request, recipe_id):
     recipe.delete()
     messages.success(request, 'The post was deleted successfully')
     return redirect('recipe_view')
-    
-    
-    
