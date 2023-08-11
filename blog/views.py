@@ -32,7 +32,13 @@ class RecipeDetailView(DetailView):
         context = super(RecipeDetailView, self).get_context_data(*args, **kwargs)
         recipe_likes = get_object_or_404(Recipe, id=self.kwargs['pk'])
         total_likes = recipe_likes.total_likes()
+
+        liked = False
+        if recipe_likes.likes.filter(id=self.request.user.id).exists():
+            liked = True
+
         context["total_likes"] = total_likes
+        context["liked"] = liked
         return context
 
 class AddRecipeView(SuccessMessageMixin, CreateView):
