@@ -4,7 +4,14 @@ from django.contrib import messages
 from django.contrib.messages.views import SuccessMessageMixin
 from .models import Recipe
 from .forms import RecipeForm
-from django.urls import reverse_lazy
+from django.urls import reverse
+from django.http import HttpResponseRedirect
+
+def LikeRecipe(request, pk):
+    recipe = get_object_or_404(Recipe, id=request.POST.get('recipe_like_id'))
+    recipe.likes.add(request.user)
+    return HttpResponseRedirect(reverse('recipe_detail', args=[str(pk)]))
+
 
 class RecipeView(ListView):
     model = Recipe
