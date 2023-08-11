@@ -20,6 +20,8 @@
 <form action="{% url 'like_recipe' recipe.pk %}" method="POST">
     {% csrf_token %}
 
+
+{% if user.is_authenticated %}
     {% if liked %}
     <button type="submit" name="recipe_like_id", value="{{ recipe.id }}", 
     class="btn btn-primary btn-sm">UnLike</button> 
@@ -27,6 +29,11 @@
     <button type="submit" name="recipe_like_id", value="{{ recipe.id }}", 
     class="btn btn-primary btn-sm">Like</button>
 
+    {% endif %}
+    {% else %}
+    <a href="{% url 'account_login' %}">
+    Login 
+    </a> to like
     {% endif %}
     - {{ total_likes }} Likes
 </form>
