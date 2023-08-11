@@ -16,8 +16,7 @@ body {
 }
 
 
-/*----BUTTONS---*/
-
+/*----BANNER---*/
 
 .banner{
     min-height: 50vh;
@@ -31,6 +30,9 @@ body {
     color: white;
 }
 
+
+/*----RECIPE CARD-----*/
+
 .recipe-name{
     color: #444444;
     text-decoration: none;
@@ -41,9 +43,6 @@ body {
     margin-right: 8px;
 }
 
-.btn-signup {
-    background-color: #a73030;
-}
 
 /*------FOOTER------*/
 footer {

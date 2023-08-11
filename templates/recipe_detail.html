@@ -15,10 +15,6 @@
         <hr>
         <p class="recipe-page-description">{{ recipe.description }}</p>
 
-        <div class="col-4">
-            <a href="{% url 'recipe_view' %}" class="btn btn-secondary">Back</a>
-        </div>
-
         <hr>
         <form action="{% url 'like_recipe' recipe.pk %}" method="POST">
             {% csrf_token %}
@@ -41,6 +37,9 @@
             - {{ total_likes }} Likes
         </form>
     </div>
+    <div class="col-4 mt-4">
+        <a href="{% url 'recipe_view' %}" class="btn btn-secondary">Back</a>
+     </div>
 </div>
 
 

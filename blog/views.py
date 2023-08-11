@@ -23,6 +23,7 @@ class RecipeView(ListView):
     model = Recipe
     template_name = 'recipe.html'
     ordering = ['-posted_date']
+    paginate_by = 4
 
 class RecipeDetailView(DetailView):
     model = Recipe
