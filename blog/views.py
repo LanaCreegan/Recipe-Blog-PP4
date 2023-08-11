@@ -1,5 +1,7 @@
-from django.shortcuts import render
+from django.shortcuts import render, get_object_or_404, redirect
 from django.views.generic import ListView, DetailView, CreateView, UpdateView, DeleteView
+from django.contrib import messages
+from django.contrib.messages.views import SuccessMessageMixin
 from .models import Recipe
 from .forms import RecipeForm
 from django.urls import reverse_lazy
@@ -13,19 +15,28 @@ class RecipeDetailView(DetailView):
     model = Recipe
     template_name = 'recipe_detail.html'
 
-class AddRecipeView(CreateView):
+class AddRecipeView(SuccessMessageMixin, CreateView):
     model = Recipe
     form_class = RecipeForm
     template_name = 'add_recipe.html'
-    success_message = 'Your thing has been done successfully'
+    success_message = 'The recipe was successfully added'
+
     
-class UpdateRecipeView(UpdateView):
+class UpdateRecipeView(SuccessMessageMixin, UpdateView):
     model = Recipe
     template_name = 'edit_recipe.html'
     fields = ['title', 'description']
+    success_message = 'The post was successfully updated'
 
-class DeleteRecipeView(DeleteView):
-    model = Recipe
-    template_name = 'delete_recipe.html'
-    success_url = reverse_lazy('recipe_view')
+
+def delete_recipe(request, recipe_id):
+    """
+    Delete Book
+    """
+    recipe = get_object_or_404(Recipe, id=recipe_id)
+    recipe.delete()
+    messages.success(request, 'The post was deleted successfully')
+    return redirect('recipe_view')
+    
+    
     
