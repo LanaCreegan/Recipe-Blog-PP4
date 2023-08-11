@@ -78,44 +78,52 @@ Fonts
 ## Features 
 Exisiting Features
 ### Home Page
-- The hero image welcomes users to the site with a message 
-
-### Home Page - Recipes
-- Underneath the hero image the recipes are displayed
+<img src="media/banner-image.png">
+- The banner image welcomes users to the site with a message 
 
 ### Recipe Detail Page
-- On the recipe page users can see all recipes available on the website. To fully see the recipe users can click on the recipe title
-
-### Recipe Page
-- In the recipe page, users can see the recipe's main image, along with the title, author, and description of the recipe.
+<img src="media/recipe-details-page.png">
+- On the recipe page users can see all recipes available on the website, along with the title, author, and description of the recipe.. To fully see the recipe users can click on the recipe title
 
 ### Add Recipe Page
+<img src="media/add-recipe.png">
 - On this page users can fill out the form to add a recipe
 - When a user adds a recipe a message pops up at the top of the page letting them know they have successfully added the recipe
 
 ### Edit Recipe Page
+<img src="media/edit-recipe.png">
 - On this page users can fill out the form to edit a recipe
 - When a user edits a recipe a message pops up at the top of the page letting them know they have successfully edited the recipe
 
 ### Delete Recipe Page
-- On this page the user will be asked if they want to delete the recipe
+<img src="media/delete-recipe-modal.png">
+- The modal will ask the user if they want to delete the recipe
+<img src="media/delete-recipe.png">
 - Once confirmed a message pops up at the top of the page letting them know they have successfully deleted the recipe
 
 ### Signup Page
+<img src="media/signup-page.png">
 - On the signup page, a new user can signup for the blof by filling out and submitting the form
+<img src="media/signed-up-message.png">
 - When a user signs up to the site a message pops up at the top of the page letting them know they have successfully signed in
 
 ### Login Page
+<img src="media/signin-page.png">
 - On the login page, users can login to the site by entering their username and password if they are a registered user
+<img src="media/signin-message.png">
 - - When a user logs in to the site a message pops up at the top of the page letting them know they have successfully signed in
 
 ### Logout Page
+<img src="media/signout.png">
 - On the logout page, users can confirm that they want to log out of the site
+<img src="media/signout-message.png">
 - When a user logs out of the site a message pops up at the top of the page letting them know they have successfully signed out
 
 ### Navbar
+<img src="media/narbar-logged-out.png">
 - The navbar is present on the top of every page
 - It displays home, register and login if the user is not logged in
+<img src="media/navbar-signedin.png">
 - Once logged in it displays home and logout
 
 Future Features
