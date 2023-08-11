@@ -1,0 +1,32 @@
+.recipe-name{
+    color: #444444;
+    text-decoration: none;
+}
+
+.recipe-page .recipe-page-date{
+    display: inline;
+    margin-right: 8px;
+}
+
+.btn-signup {
+    background-color: #a73030;
+}
+
+footer {
+    padding: 64px 0;
+}
+
+.social-networks {
+    text-align: center;
+
+}
+
+.social-networks > li {
+    display: inline;
+    margin: 0 32px;
+}
+
+.social-networks i {
+    font-size: 110%;
+    color: #323031;
+}

@@ -1,42 +1,48 @@
 {% extends 'base.html' %}
+{% load static %}
 
 {% block content %}
-<h1>{{ recipe.title }}</h1>
-{{ recipe.posted_date }}
-<small>By: {{ recipe.author }}</small><br/>
-<hr>
-<br/>
-{{ recipe.description }}
+<div class="recipe-page">
+    <div class="row">
+        <div class="col-12">
+            <h1 class="recipe-page-title">{{ recipe.title }}</h1>
+            <p class="recipe-page-date">{{ recipe.posted_date }}</p>
+            <small class="recipe-page-author">By: {{ recipe.author }}</small>
+            <img src="https://www.indiafoodnetwork.in/h-upload/2021/12/14/613900-google-year-in-search-2021-for-indian-recipes-featured.webp" class="card-img-top" alt="...">
+        </div>
+    </div>
+    <div class="row">
+        <hr>
+        <p class="recipe-page-description">{{ recipe.description }}</p>
+
+        <div class="col-4">
+            <a href="{% url 'recipe_view' %}" class="btn btn-secondary">Back</a>
+        </div>
+
+        <hr>
+        <form action="{% url 'like_recipe' recipe.pk %}" method="POST">
+            {% csrf_token %}
 
 
-<br/><br/>
-<div>
-<a href="{% url 'recipe_view' %}" class="btn btn-secondary">Back</a>
+        {% if user.is_authenticated %}
+            {% if liked %}
+            <button type="submit" name="recipe_like_id", value="{{ recipe.id }}", 
+            class="btn btn-primary btn-sm">UnLike</button> 
+            {% else %}
+            <button type="submit" name="recipe_like_id", value="{{ recipe.id }}", 
+            class="btn btn-primary btn-sm">Like</button>
+
+            {% endif %}
+            {% else %}
+            <a href="{% url 'account_login' %}">
+            Login 
+            </a> to like
+            {% endif %}
+            - {{ total_likes }} Likes
+        </form>
+    </div>
 </div>
 
-<br/><br/>
-<hr>
-<br/>
-<form action="{% url 'like_recipe' recipe.pk %}" method="POST">
-    {% csrf_token %}
-
-
-{% if user.is_authenticated %}
-    {% if liked %}
-    <button type="submit" name="recipe_like_id", value="{{ recipe.id }}", 
-    class="btn btn-primary btn-sm">UnLike</button> 
-    {% else %}
-    <button type="submit" name="recipe_like_id", value="{{ recipe.id }}", 
-    class="btn btn-primary btn-sm">Like</button>
-
-    {% endif %}
-    {% else %}
-    <a href="{% url 'account_login' %}">
-    Login 
-    </a> to like
-    {% endif %}
-    - {{ total_likes }} Likes
-</form>
 
 
 {% endblock %}

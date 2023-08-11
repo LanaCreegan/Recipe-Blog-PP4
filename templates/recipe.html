@@ -1,29 +1,31 @@
 {% extends 'base.html' %}
+{% load static %}
 
 {% block content %}
 
-<h1>post</h1>
-
+<h1>My Recipes</h1>
 {% for recipe in recipe_list %}
-<div class="card" style="width: 18rem;">
-    <div class="col-sm-6 mb-3 mb-sm-0">
-    <img src="..." class="card-img-top" alt="...">
-    <div class="card-body">
-       <a href="{% url 'recipe_detail' recipe.pk %}">{{ recipe.title }}</a>
-      <p class="card-title">{{ recipe.author }} - {{ recipe.posted_date }}</p>
-      <p class="card-text">{{ recipe.description|slice:":200"|safe }}</p>
+<div class="col-sm-6 mb-3 mb-sm-0">
+    <div class="card">
+      <img src="https://www.indiafoodnetwork.in/h-upload/2021/12/14/613900-google-year-in-search-2021-for-indian-recipes-featured.webp" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h2><a class="recipe-name" href="{% url 'recipe_detail' recipe.pk %}">{{ recipe.title }}</a></h2>
+        <p class="card-title">{{ recipe.author }} - {{ recipe.posted_date }}</p>
+        <p class="card-text">{{ recipe.description|slice:":200"|safe }}</p>
+      </div>
     </div>
-    </div>
+    {% if user.is_authenticated %}
+    <small><a class="btn btn-primary mt-2" href="{% url 'update_recipe' recipe.pk %}">Update Recipe</a></small>
+    <small><a class="btn btn-danger mt-2" href="{% url 'delete_recipe' recipe.pk %}">Delete Recipe</a></small>
+    {% endif %}
+</div>
   
 
-{% if user.is_authenticated %}
- <small><a href="{% url 'update_recipe' recipe.pk %}">Update recipe</a></small>
-<small><a href="{% url 'delete_recipe' recipe.pk %}">delete recipe</a></small>
-{% endif %}
+
 {% endfor %}
 </div>
 
-<a href="{% url 'add_recipe' %}">Add recipe</a>
+<a class="btn btn-dark mt-4" href="{% url 'add_recipe' %}">Add recipe</a>
 
 {% endblock %}
 
