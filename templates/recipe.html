@@ -5,6 +5,7 @@
 
 <h1>My Recipes</h1>
 
+<!--Recipe preview content-->
 {% for recipe in recipe_list %}
 <div class="col-sm-6 mb-3 mb-sm-0 mt-4">
     <div class="card">
@@ -20,6 +21,7 @@
       Delete Recipe
     </button>
 
+    <!--Delete recipe modal-->
     <div class="modal fade" id="recipe-delete-modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
       <div class="modal-dialog">
         <div class="modal-content">
@@ -42,6 +44,7 @@
 {% endfor %}
 </div>
 
+<!--Add recipe button-->
 <a class="btn btn-dark mt-4" href="{% url 'add_recipe' %}">Add recipe</a>
 
 {% if is_paginated %}

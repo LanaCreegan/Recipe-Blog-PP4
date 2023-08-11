@@ -7,7 +7,11 @@ from .forms import RecipeForm
 from django.urls import reverse
 from django.http import HttpResponseRedirect
 
+
 def LikeRecipe(request, pk):
+    """
+    View to like and unlike recipe
+    """
     recipe = get_object_or_404(Recipe, id=request.POST.get('recipe_like_id'))
     liked = False
     if recipe.likes.filter(id=request.user.id).exists():
@@ -20,15 +24,23 @@ def LikeRecipe(request, pk):
 
 
 class RecipeView(ListView):
+    """
+    View that provides list of recipes
+    """
     model = Recipe
     template_name = 'recipe.html'
     ordering = ['-posted_date']
     paginate_by = 4
 
+
 class RecipeDetailView(DetailView):
+    """
+    View for a singular recipe and view recipe likes
+    """
     model = Recipe
     template_name = 'recipe_detail.html'
-    
+
+
     def get_context_data(self, *args, **kwargs):
         context = super(RecipeDetailView, self).get_context_data(*args, **kwargs)
         recipe_likes = get_object_or_404(Recipe, id=self.kwargs['pk'])
@@ -42,14 +54,21 @@ class RecipeDetailView(DetailView):
         context["liked"] = liked
         return context
 
+
 class AddRecipeView(SuccessMessageMixin, CreateView):
+    """
+    View that adds a recipe
+    """
     model = Recipe
     form_class = RecipeForm
     template_name = 'add_recipe.html'
     success_message = 'The recipe was successfully added'
 
-    
+
 class UpdateRecipeView(SuccessMessageMixin, UpdateView):
+    """
+    View that edits a recipe
+    """
     model = Recipe
     template_name = 'edit_recipe.html'
     fields = ['title', 'description', 'overview']
@@ -58,7 +77,7 @@ class UpdateRecipeView(SuccessMessageMixin, UpdateView):
 
 def delete_recipe(request, recipe_id):
     """
-    Delete Book
+    View that deletes recipe
     """
     recipe = get_object_or_404(Recipe, id=recipe_id)
     recipe.delete()

@@ -6,6 +6,7 @@ from datetime import datetime, date
 
 
 class Recipe(models.Model):
+    """Model for Recipe"""
     title = models.CharField(max_length=200)
     author = models.ForeignKey(User, on_delete=models.CASCADE)
     overview = models.TextField(blank=True)
