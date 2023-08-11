@@ -49,10 +49,10 @@
     <ul class="pagination justify-content-center">
         {% if page_obj.has_previous %}
         <li><a href="?page={{ page_obj.previous_page_number }}" aria-label="Go to the blog next page"
-                class="page-link" class="prev">&laquo; PREV </a></li>
+                class="page-link">&laquo; PREV </a></li>
         {% endif %}
         {% if page_obj.has_next %}
-        <li><a href="?page={{ page_obj.next_page_number }}" aria-label="Go to the blog back page" class="page-link" class="next">
+        <li><a href="?page={{ page_obj.next_page_number }}" aria-label="Go to the blog back page" class="page-link">
                 NEXT &raquo;</a></li>
         {% endif %}
     </ul>
