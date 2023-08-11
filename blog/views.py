@@ -9,7 +9,13 @@ from django.http import HttpResponseRedirect
 
 def LikeRecipe(request, pk):
     recipe = get_object_or_404(Recipe, id=request.POST.get('recipe_like_id'))
-    recipe.likes.add(request.user)
+    liked = False
+    if recipe.likes.filter(id=request.user.id).exists():
+        recipe.likes.remove(request.user)
+        liked = False
+    else:
+        recipe.likes.add(request.user)
+        liked = True
     return HttpResponseRedirect(reverse('recipe_detail', args=[str(pk)]))
 
 
