@@ -21,6 +21,13 @@ class RecipeView(ListView):
 class RecipeDetailView(DetailView):
     model = Recipe
     template_name = 'recipe_detail.html'
+    
+    def get_context_data(self, *args, **kwargs):
+        context = super(RecipeDetailView, self).get_context_data(*args, **kwargs)
+        recipe_likes = get_object_or_404(Recipe, id=self.kwargs['pk'])
+        total_likes = recipe_likes.total_likes()
+        context["total_likes"] = total_likes
+        return context
 
 class AddRecipeView(SuccessMessageMixin, CreateView):
     model = Recipe
