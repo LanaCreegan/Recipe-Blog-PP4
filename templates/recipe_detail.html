@@ -2,13 +2,13 @@
 {% load static %}
 
 {% block content %}
+
 <div class="recipe-page">
     <div class="row">
         <div class="col-12">
             <h1 class="recipe-page-title">{{ recipe.title }}</h1>
             <p class="recipe-page-date">{{ recipe.posted_date }}</p>
             <small class="recipe-page-author">By: {{ recipe.author }}</small>
-            <img src="{{ recipe.featured_image.url }}" class="card-img-top" alt="...">
         </div>
     </div>
     <div class="row">

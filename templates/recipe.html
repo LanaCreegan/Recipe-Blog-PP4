@@ -8,7 +8,6 @@
 {% for recipe in recipe_list %}
 <div class="col-sm-6 mb-3 mb-sm-0">
     <div class="card">
-      <img src="{{ recipe.featured_image.url }}" class="card-img-top" alt="...">
       <div class="card-body">
         <h2><a class="recipe-name" href="{% url 'recipe_detail' recipe.pk %}">{{ recipe.title }}</a></h2>
         <p class="card-title">{{ recipe.author }} - {{ recipe.posted_date }}</p>
@@ -16,8 +15,8 @@
       </div>
     </div>
     {% if user.is_authenticated %}
-    <small><a class="btn btn-primary mt-2" href="{% url 'update_recipe' recipe.pk %}">Update Recipe</a></small>
-    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#recipe-delete-modal">
+    <a class="btn btn-primary mt-2" href="{% url 'update_recipe' recipe.pk %}">Update Recipe</a>
+    <button type="button" class="btn btn-danger mt-2" data-bs-toggle="modal" data-bs-target="#recipe-delete-modal">
       Delete Recipe
     </button>
 
@@ -32,8 +31,8 @@
             <p>Are you sure you want to delete the recipe?</p>
           </div>
           <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-            <a class="btn btn-primary mt-2" href="{% url 'delete_recipe' recipe.pk %}">Delete Recipe</a>
+            <button type="button" class="btn btn-secondary mt-2" data-bs-dismiss="modal">Close</button>
+            <a class="btn btn-danger mt-2" href="{% url 'delete_recipe' recipe.pk %}">Delete Recipe</a>
           </div>
         </div>
       </div>

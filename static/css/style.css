@@ -6,6 +6,30 @@ body {
     font-family: 'Montserrat', sans-serif !important;
 }
 
+.content-wrapper {
+    background-image: url('https://res.cloudinary.com/dvncikson/image/upload/v1689884007/hero-image.jpg');
+}
+
+/*-----NAVBAR-----*/
+.nav-item {
+    padding-left: 20px;
+}
+
+
+/*----BUTTONS---*/
+
+
+.banner{
+    min-height: 50vh;
+    background-image: url('https://res.cloudinary.com/dvncikson/image/upload/v1691609812/xafnv14ft2kogps3ivu6.jpg');
+    background-position: center;
+    background-size: cover;
+}
+
+.banner h1, .banner p{
+    text-align: center;
+    color: white;
+}
 
 .recipe-name{
     color: #444444;
