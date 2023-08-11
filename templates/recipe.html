@@ -15,7 +15,7 @@
       </div>
     </div>
     {% if user.is_authenticated %}
-    <a class="btn btn-primary mt-2" href="{% url 'update_recipe' recipe.pk %}">Update Recipe</a>
+    <a class="btn btn-dark mt-2" href="{% url 'update_recipe' recipe.pk %}">Update Recipe</a>
     <button type="button" class="btn btn-danger mt-2" data-bs-toggle="modal" data-bs-target="#recipe-delete-modal">
       Delete Recipe
     </button>
