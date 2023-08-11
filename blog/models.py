@@ -11,6 +11,7 @@ class Recipe(models.Model):
     description = models.TextField(max_length=500, null=True)
     featured_image = CloudinaryField('image', default='placeholder')
     posted_date = models.DateField(auto_now_add=True)
+    likes = models.ManyToManyField(User, related_name='recipe_post')
 
 
     def __str__(self):

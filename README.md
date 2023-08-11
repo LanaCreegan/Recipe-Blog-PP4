@@ -91,19 +91,32 @@ Exisiting Features
 
 ### Add Recipe Page
 - On this page users can fill out the form to add a recipe
+- When a user adds a recipe a message pops up at the top of the page letting them know they have successfully added the recipe
 
 ### Edit Recipe Page
 - On this page users can fill out the form to edit a recipe
+- When a user edits a recipe a message pops up at the top of the page letting them know they have successfully edited the recipe
+
+### Delete Recipe Page
+- On this page the user will be asked if they want to delete the recipe
+- Once confirmed a message pops up at the top of the page letting them know they have successfully deleted the recipe
 
 ### Signup Page
 - On the signup page, a new user can signup for the blof by filling out and submitting the form
+- When a user signs up to the site a message pops up at the top of the page letting them know they have successfully signed in
 
 ### Login Page
 - On the login page, users can login to the site by entering their username and password if they are a registered user
+- - When a user logs in to the site a message pops up at the top of the page letting them know they have successfully signed in
 
 ### Logout Page
 - On the logout page, users can confirm that they want to log out of the site
+- When a user logs out of the site a message pops up at the top of the page letting them know they have successfully signed out
 
+### Navbar
+- The navbar is present on the top of every page
+- It displays home, register and login if the user is not logged in
+- Once logged in it displays home and logout
 
 Future Features
 
