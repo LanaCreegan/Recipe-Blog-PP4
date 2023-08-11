@@ -50,7 +50,7 @@ Recipes:
 * Users can create, view, edit and delete their recipes 
 
 Recipe Interaction: 
-* Users can leave a comment on a recipe and save a recipe. The user needs to be logged in to interact with recipes.
+* Users can leave like a recipe. The user needs to be logged in to interact with recipes.
 
 Responsiveness:
 * Create a website that is fully responsive for desktop, tablet and mobile.
@@ -63,7 +63,7 @@ Recipe Page:
 * Features a list of recipes posted by the user and other users. Visible if you are registered or not.
 
 Recipe Steps Page:
-* Users can click into a recipe for instructions for the recipes. Save and comment features are for signed in users only.
+* Users can click into a recipe for instructions for the recipes. Like feature is for signed in users only.
 
 ## Skeleton
 Wireframes
@@ -119,6 +119,10 @@ Exisiting Features
 - Once logged in it displays home and logout
 
 Future Features
+- Add ability to comment on recipes
+- Add ability for users to have a profile where they can view recipes that they have saved, along with uploading a profile image and adding a bio
+- Add categories so users can look to see what recipes are on the blog for fish, chicken etc
+- Add search bar so users can search for a specific recipe
 
 ## Technologies Used
 Python - 

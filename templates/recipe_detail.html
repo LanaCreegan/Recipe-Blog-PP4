@@ -24,10 +24,10 @@
         {% if user.is_authenticated %}
             {% if liked %}
             <button type="submit" name="recipe_like_id", value="{{ recipe.id }}", 
-            class="btn btn-primary btn-sm">UnLike</button> 
+            class="btn btn-sm"><i class="fa-solid fa-thumbs-up"></i></button> 
             {% else %}
             <button type="submit" name="recipe_like_id", value="{{ recipe.id }}", 
-            class="btn btn-primary btn-sm">Like</button>
+            class="btn btn-sm"><i class="fa-solid fa-thumbs-up"></i></button>
 
             {% endif %}
             {% else %}
