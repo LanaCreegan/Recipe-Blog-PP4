@@ -30,9 +30,10 @@ TEMPLATES_DIR = os.path.join(BASE_DIR, 'templates')
 SECRET_KEY = os.environ.get('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = ['recipe-blog-56bae4a81d23.herokuapp.com', '8000-lanacreegan-recipeblogp-b2x6vnj66vg.ws-eu103.gitpod.io', 'localhost']
+
+ALLOWED_HOSTS = ['recipe-blog-56bae4a81d23.herokuapp.com', 'localhost']
 
 
 # Application definition
