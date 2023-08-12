@@ -68,6 +68,18 @@ Recipe Steps Page:
 ## Skeleton
 Wireframes
 
+<img src="media/home-page-wireframe.png" width="30%">
+
+* Home Page
+
+<img src="media/recipe-page-wireframe.png" width="30%">
+
+* Recipe Page
+
+<img src="media/recipe-list-wireframe.png" width="30%">
+
+* Recipe Instruction Page
+
 Database
 
 ## Surface
