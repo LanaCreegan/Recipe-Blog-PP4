@@ -24,7 +24,7 @@ Recipe Blog is a website where users can share their recipes. It was built in Dj
     * [Code](#Code)
 
 ## UX
-Recipe Blog is a simple and user intuitive website for users to share their recipes with others and discover recipes by other users. 
+Easy Bites is a simple and user intuitive website for users to share their recipes with others and discover recipes by other users. Once logged in, users can create, view, update and delete their recipes, as well as like them.
 
 ### User Stories 
 User Account: 
@@ -82,9 +82,14 @@ Wireframes
 
 Database
 
+<img src="media/recipe-database.png">
+
 ## Surface
 Colour 
-* The colour scheme is kept simple by using black and white for the main design of the website. For the delete recipe button red is used to stand out to the user
+
+<img src="media/site-colours.png" width="30%">
+
+* The colour scheme is kept simple by using black and white for the main design of the website. It is this way so nothing is too distracting for the user when they are reading. For the delete recipe button red is used to stand out to the user
 
 Fonts 
 * The fonts used for this site are Lato and Montserrat
@@ -229,43 +234,7 @@ Python
 
 
 ## Testing
-Testing:
-As a site user I want to create an account to add recipes:
-- The user can navigate to the navigation bar at the top of the page
-- The user can click the register link within the navbar which brings the user to a signup page
-- When the user fills out the form they are then alerted that they have signed in successfully
-
-As a site user I want to create a recipe:
-- The user can navigate to the home page. If the user is logged in they will see a create recipe button
-- This button brings the user to a create recipe form where they can enter the title, author, description and upload an image for the recipe
-- The user then clicks the submit button, which then adds the recipe to the home page and alerts the user that the recipe has been added successfully
-
-As a site user I want to update a recipe:
-- The user can navigate to the home page.If the user is logged in they will see a update recipe button
-- This button brings the user to an edit recipe form where they can enter the title, author, description and upload an image for the recipe
-- The user then clicks the submit button, which then edits the recipe and alerts the user that the recipe has been edited successfully
-
-As a site user I want to delete a recipe:
-- The user can navigate to the home page. If the user is logged in they will see a delete recipe button
-- This button brings the user to a page asking the user if they want to delete the recipe
-- Once the user confirms they want to delete the recipe the user is brought back to the home screen and is alerted that the recipe has been deleted successfully
-
-As a site user I want to like a recipe:
-- There is a like button at the bottom of the recipe that the user can click on
-- The total number of likes on the recipe is shown
-
-As a site user I want to return to the recipes page:
-- There is a back button at the bottom of the recipe that brings the user back to the recipe page when clicked
-
-As a site user I want to log out of the site:
-- The user can navigate to the navigation bar at the top of the page
-- The user can click logout within the navbar which brings the user back to the home page
-- The user is alerted that they have logged out successfully 
-
-As a site user I want to login of the site:
-- The user can navigate to the navigation bar at the top of the page
-- The user can click login within the navbar which brings the user back to the home page
-- The user is alerted that they have logged in successfully 
+Testing documents can be found at [TESTING.MD](TESTING.md)
 
 
 ## Deployment 
