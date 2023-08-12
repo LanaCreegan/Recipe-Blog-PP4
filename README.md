@@ -75,6 +75,33 @@ Colour
 
 Fonts 
 
+### Agile Methodology
+All epics and user stories were recored using [Trello](https://trello.com/home). They were moved from To-Do, In-Progress and then Done lists
+
+## Sprint 1 - Account Management:
+<img src="media/account-management-sprint.png" width="30%">
+
+- Implement a Register page
+- Implement a Login page
+- Implement a Logout Page 
+
+## Sprint 2 - Managing Recipes:
+<img src="media/managing-recipes-sprint.png" width="30%">
+
+
+
+- Implement a view recipe page
+- Implement a create recipe form
+- Implement a update recipe form
+- Implement a delete recipe form
+
+## Sprint 3 - Recipe Interaction:
+<img src="media/recipe-interaction-sprint.png" width="30%">
+
+- Implement a like button
+- Implement a back button
+
+
 ## Features 
 Exisiting Features
 ### Home Page
