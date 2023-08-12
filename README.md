@@ -84,8 +84,10 @@ Database
 
 ## Surface
 Colour 
+* The colour scheme is kept simple by using black and white for the main design of the website. For the delete recipe button red is used to stand out to the user
 
 Fonts 
+* The fonts used for this site are Lato and Montserrat
 
 ### Agile Methodology
 All epics and user stories were recored using [Trello](https://trello.com/home). They were moved from To-Do, In-Progress and then Done lists
